@@ -1,5 +1,11 @@
 <template>
+  <section>
+    <BentoGrid />
+  </section>
+  <section class="my-48">
+    <Feature />
+  </section>
 	<section>
-		<BentoGrid />
+		<SocialProof />
 	</section>
 </template>

@@ -2,7 +2,7 @@
 	<nav class="flex items-center justify-between">
 		<div class="flex items-center gap-4 justify-between w-full md:w-auto">
 			<NuxtLink class="text-2xl font-bold" to="/">Code Collective</NuxtLink>
-			<NuxtLink class="sm:hidden px-4 py-2 bg-black border-2 border-accent hover:bg-accent text-white rounded" to="/apply">Postuler</NuxtLink>
+			<NuxtLink class="sm:hidden px-4 py-2 bg-black hover:bg-accent text-white rounded" to="/apply">Postuler</NuxtLink>
 		</div>
 		<div class="hidden md:flex items-center gap-4 font-inter">
 			<NuxtLink class="" to="/formations">Formations</NuxtLink>

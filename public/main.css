@@ -15,6 +15,6 @@
 
 @layer utilities {
   .h-screen-minus-menu {
-    height: calc(100vh - 144px);
+    height: calc(100vh - 224px);
   }
 }
