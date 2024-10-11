@@ -4,17 +4,57 @@
 
 @layer base {
   @font-face {
-    font-family: 'punk';
-    src: url('/fonts/PunkRocker_S_Demo.otf') format('opentype');
+    font-family: "punk";
+    src: url("/fonts/PunkRocker_S_Demo.otf") format("opentype");
   }
   @font-face {
-    font-family: 'grotesk';
-    src: url('/fonts/SpaceGrotesk.ttf') format('truetype');
+    font-family: "grotesk";
+    src: url("/fonts/SpaceGrotesk.ttf") format("truetype");
   }
 }
 
 @layer utilities {
   .h-screen-minus-menu {
     height: calc(100vh - 224px);
+  }
+}
+
+@layer components {
+  .bg-punk-dark {
+    @apply bg-[#111113];
+  }
+
+  .border-punk-primary {
+    @apply border-[#FF4081];
+  }
+
+  .border-punk-secondary {
+    @apply border-[#00E5FF];
+  }
+
+  .hover\:bg-punk-primary {
+    @apply hover:bg-[#FF4081];
+  }
+
+  .hover\:bg-punk-secondary {
+    @apply hover:bg-[#00E5FF];
+  }
+
+  /* Gradient de fond */
+  .bg-punk-gradient {
+    @apply bg-gradient-to-br from-[#121212] to-[#1E1E1E];
+  }
+
+  /* Styles pour les éléments spécifiques */
+  .punk-button {
+    @apply bg-[#FF4081] bg-red-400 text-white hover:bg-[#00E5FF] transition-colors duration-300;
+  }
+
+  .punk-input {
+    @apply bg-[#2C2C2C] text-white border-[#FF4081] focus:border-[#00E5FF] focus:ring-[#00E5FF];
+  }
+
+  .punk-card {
+    @apply bg-[#1E1E1E] border-[#FF4081] hover:border-[#00E5FF] transition-colors duration-300;
   }
 }

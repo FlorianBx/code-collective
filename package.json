@@ -15,9 +15,13 @@
     "@nuxt/icon": "^1.5.1",
     "@nuxt/image": "^1.8.0",
     "@nuxtjs/tailwindcss": "^6.12.1",
+    "@vitejs/plugin-vue": "^5.1.4",
     "nuxt": "^3.13.0",
     "nuxt-lucide-icons": "^1.0.5",
     "vue": "latest",
     "vue-router": "latest"
+  },
+  "devDependencies": {
+    "@vue-email/nuxt": "^0.8.19"
   }
 }
