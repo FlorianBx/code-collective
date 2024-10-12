@@ -1,5 +1,5 @@
 <template>
-  <section class="bg-punk-gradient text-gray-100 p-4 sm:p-8 my-12">
+  <section class="bg-punk-gradient text-gray-100 p-4 sm:p-8 my-24">
     <div class="max-w-full mx-auto bg-punk-surface rounded-lg shadow-xl overflow-hidden">
       <div class="p-6 sm:p-10">
         <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-center">

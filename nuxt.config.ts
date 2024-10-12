@@ -1,4 +1,3 @@
-import vue from "@vitejs/plugin-vue";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
@@ -10,20 +9,28 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "nuxt-lucide-icons",
-    "@vue-email/nuxt",
+		// "nuxt-nodemailer"
+    "nuxt-mail",
   ],
-  nitro: {
-    rollupConfig: {
-      plugins: [vue()],
+  runtimeConfig: {
+    mail: {
+      message: {
+        to: process.env.NUXT_MAIL_TO,
+      },
+      smtp: {
+        host: process.env.NUXT_MAIL_HOST,
+        port: process.env.NUXT_MAIL_PORT,
+        auth: {
+          user: process.env.NUXT_MAIL_USER,
+          pass: process.env.NUXT_MAIL_PASS,
+        },
+      },
     },
   },
-  tailwindcss: {
-    cssPath: ["/main.css", { injectPosition: "first" }],
-    configPath: "tailwind.config.js",
-    exposeConfig: {
-      level: 2,
-    },
-    viewer: true,
-  },
+  // tailwindcss: {
+  //   cssPath: "main.css",
+  //   configPath: "tailwind.config.js",
+  //   exposeConfig: true,
+  //   viewer: true,
+  // },
 });
-

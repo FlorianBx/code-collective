@@ -1,4 +1,42 @@
 <script setup lang="ts">
+const mail = useMail()
+const email = ref('')
+
+// const sendEmail = async () => {
+//   if (!email.value) {
+//     console.error('Veuillez entrer une adresse e-mail valide.')
+//     return
+//   }
+//
+//   try {
+//     await sendAdminNotification(email.value)
+//     await sendUserConfirmation(email.value)
+//     console.log('Emails envoyés avec succès')
+//     email.value = ''
+//   } catch (error) {
+//     console.error('Erreur lors de l\'envoi des e-mails:', error)
+//   }
+// }
+
+const sendEmail = async () => {
+  if (!email.value) {
+    console.error('Veuillez entrer une adresse e-mail valide.')
+    return
+  }
+
+  try {
+    await mail.send({
+      to: email.value,
+      subject: '[New User] Code Collective',
+      text: `New user (${email.value}) has registered to the workshop.`,
+    })
+    console.log('Email envoyé avec succès')
+    email.value = ''
+  } catch (error) {
+    console.error('Erreur lors de l\'envoi de l\'e-mail:', error)
+  }
+}
+
 const workshopItems = [
   "2 à 3 jours pour maîtriser des compétences clés",
   "Petits groupes, pratique intensive",
@@ -40,13 +78,17 @@ const reviewTags = [
           </div>
           <div class="flex flex-col gap-4 mt-4">
             <input
+              v-model="email"
               type="email"
-              class="w-full h-12 sm:h-14 px-4 sm:px-6 py-2 sm:py-3 text-sm text-gray-900 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full h-12 sm:h-14 px-4 sm:px-6 py-2 sm:py-3 text-sm text-gray-200 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               placeholder="Votre email"
             />
-            <NuxtLink href="#" class="w-full py-3 sm:py-4 px-4 sm:px-6 bg-blue-600 hover:bg-blue-700 text-white rounded transition duration-300 text-center text-sm sm:text-base font-semibold">
+            <button
+              @click="sendEmail"
+              class="w-full py-3 sm:py-4 px-4 sm:px-6 bg-blue-600 hover:bg-blue-700 text-white rounded transition duration-300 text-center text-sm sm:text-base font-semibold"
+            >
               Participer à un workshop
-            </NuxtLink>
+            </button>
           </div>
         </div>
 
