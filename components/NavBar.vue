@@ -1,5 +1,5 @@
 <template>
-  <nav class="flex items-center justify-between">
+  <nav class="flex items-center justify-between p-4">
     <div class="flex items-center gap-4 justify-between w-full md:w-auto">
       <NuxtLink class="text-2xl font-bold" to="/">Code Collective</NuxtLink>
       <NuxtLink
