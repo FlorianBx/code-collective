@@ -1,6 +1,6 @@
 <script setup lang="ts">
-const mail = useMail()
-const email = ref('')
+const mail = useMail();
+const email = ref("");
 
 // const sendEmail = async () => {
 //   if (!email.value) {
@@ -20,40 +20,43 @@ const email = ref('')
 
 const sendEmail = async () => {
   if (!email.value) {
-    console.error('Veuillez entrer une adresse e-mail valide.')
-    return
+    console.error("Veuillez entrer une adresse e-mail valide.");
+    return;
   }
 
   try {
     await mail.send({
       to: email.value,
-      subject: '[New User] Code Collective',
+      subject: "[New User] Code Collective",
       text: `New user (${email.value}) has registered to the workshop.`,
-    })
-    console.log('Email envoyé avec succès')
-    email.value = ''
+    });
+    console.log("Email envoyé avec succès");
+    email.value = "";
   } catch (error) {
-    console.error('Erreur lors de l\'envoi de l\'e-mail:', error)
+    console.error("Erreur lors de l'envoi de l'e-mail:", error);
   }
-}
+};
 
 const workshopItems = [
-  "2 à 3 jours pour maîtriser des compétences clés",
+  "2 à 3 jours pour maîtriser les compétences clés",
   "Petits groupes, pratique intensive",
   "Formateurs experts du terrain",
 ];
 
 const reviewTags = [
-  "Tests Unitaires",
+  "Architecture",
   "Git",
-  "Console de Debug",
+  "Accessibilité",
+  "Tests unitaires",
+  "Tests d'intégration",
+  "Dev tools",
   "Maîtrise d'IDE",
   "TailwindCSS",
 ];
 </script>
 
 <template>
-  <div class="bg-punk-gradient text-gray-100 p-4 sm:p-8 my-12">
+  <div class="bg-punk-gradient text-gray-100 p-4 sm:p-8">
     <div class="max-w-7xl mx-auto">
       <div
         class="grid grid-cols-1 md:grid-cols-5 grid-rows-[auto,auto,auto,auto] sm:grid-rows-[auto,auto,auto] gap-4 sm:gap-6"
@@ -63,16 +66,21 @@ const reviewTags = [
           class="bg-punk-surface p-6 sm:p-8 rounded-lg order-1 row-span-2 sm:row-span-3 md:col-span-3 flex flex-col justify-between"
         >
           <div>
-            <div class="text-sm mb-2 text-blue-400">lorem ipsum</div>
+            <div class="text-sm text-blue-400 mt-1">
+              <span class="font-mono">// Workshops et formations</span>
+            </div>
             <h1
-              class="text-3xl sm:text-5xl lg:text-6xl font-bold mb-4 font-grotesk"
+              class="text-3xl sm:text-5xl lg:text-6xl font-bold font-grotesk leading-loose mt-[30px] mb-[15px]"
             >
-              <span class="text-punk-primary font-grotesk">
-                FORMEZ-VOUS, DEMARQUEZ-VOUS
-              </span>
+              FORMEZ-VOUS, DEMARQUEZ-VOUS
             </h1>
-            <p class="text-punk-primary mb-8">
-              Maîtrisez les compétences clés du marché et gagnez en confiance :
+            <p class="text-punk-primary mb-8 leading-relaxed">
+              Maîtrisez les
+              <strong class="border-b-4 border-b-blue-400"
+                >compétences clés</strong
+              >
+              et gagnez en
+              <strong class="border-b-4 border-b-blue-400">confiance</strong> :
               98% de nos participants se démarquent en entretien
             </p>
           </div>
@@ -80,12 +88,12 @@ const reviewTags = [
             <input
               v-model="email"
               type="email"
-              class="w-full h-12 sm:h-14 px-4 sm:px-6 py-2 sm:py-3 text-sm text-gray-200 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+              class="w-full h-12 placeholder:text-base sm:h-14 px-4 sm:px-6 py-2 sm:py-3 text-sm text-gray-200 bg-gray-700 rounded focus:outline-none focus:ring-2 focus:ring-gray-400 focus:border-transparent"
               placeholder="Votre email"
             />
             <button
               @click="sendEmail"
-              class="w-full py-3 sm:py-4 px-4 sm:px-6 bg-blue-600 hover:bg-blue-700 text-white rounded transition duration-300 text-center text-sm sm:text-base font-semibold"
+              class="w-full border-2 border-blue-400 bg-transparent py-3 sm:py-4 px-4 sm:px-6 hover:bg-gray-800 text-white uppercase rounded transition duration-300 text-center font-grotesk text-sm sm:text-base font-semibold"
             >
               Participer à un workshop
             </button>
@@ -102,46 +110,12 @@ const reviewTags = [
           ></div>
         </div>
 
-        <!-- Workshops Section -->
+				<!-- Tags Section -->
         <div
-          class="bg-punk-surface p-6 rounded-lg flex order-4 md:order-3 md:col-span-3 row-span-2"
+          class="bg-punk-surface p-6 rounded-lg order-3 md:order-4 md:col-span-3 row-span-2"
         >
-          <div>
-            <h2 class="font-bold text-2xl sm:text-3xl mb-4 text-blue-400">
-              WORKSHOPS INTENSIFS
-            </h2>
-            <ul class="space-y-2">
-              <li
-                v-for="item in workshopItems"
-                :key="item"
-                class="flex items-center gap-2"
-              >
-                <svg
-                  class="flex-shrink-0 w-3.5 h-3.5 text-blue-400"
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 16 12"
-                >
-                  <path
-                    stroke="currentColor"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 5.917 5.724 10.5 15 1.5"
-                  />
-                </svg>
-                <span class="text-gray-300">{{ item }}</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- Reviews Section -->
-        <div
-          class="bg-punk-surface p-6 rounded-lg order-3 md:order-4 md:col-span-2 row-span-2"
-        >
-          <div class="text-4xl md:text-5xl font-bold text-blue-400">4.98</div>
-          <div class="text-sm mb-4 text-gray-400">BASED ON 619 REVIEWS</div>
+          <div class="text-4xl md:text-5xl font-bold text-blue-400 font-grotesk">8+ tracks</div>
+          <div class="text-sm mb-4 text-gray-400">Workshops actuellement disponibles</div>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="tag in reviewTags"
@@ -151,6 +125,25 @@ const reviewTags = [
               {{ tag }}
             </span>
           </div>
+        </div>
+
+        <!-- Workshops Section -->
+        <div
+          class="bg-punk-surface p-6 rounded-lg order-3 md:order-4 md:col-span-2 row-span-2"
+        >
+          <h2 class="font-bold text-2xl sm:text-3xl mb-4 text-blue-400">
+            WORKSHOPS
+          </h2>
+          <ul class="space-y-2">
+            <li
+              v-for="item in workshopItems"
+              :key="item"
+              class="flex items-center gap-2"
+            >
+              <LucideCircleCheckBig class="text-blue-400" />
+              <span class="text-gray-300">{{ item }}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>

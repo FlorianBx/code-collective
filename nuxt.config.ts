@@ -12,6 +12,11 @@ export default defineNuxtConfig({
 		// "nuxt-nodemailer"
     "nuxt-mail",
   ],
+	icon: {
+    serverBundle: {
+      collections: ['uil', 'mdi'] // <!--- this
+    }
+  },
   runtimeConfig: {
     mail: {
       message: {
