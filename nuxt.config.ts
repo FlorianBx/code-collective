@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: "2024-04-03",
   devtools: { enabled: true },
@@ -9,14 +8,9 @@ export default defineNuxtConfig({
     "@nuxt/icon",
     "@nuxt/image",
     "nuxt-lucide-icons",
-		// "nuxt-nodemailer"
+    // "nuxt-nodemailer"
     "nuxt-mail",
   ],
-	icon: {
-    serverBundle: {
-      collections: ['uil', 'mdi'] // <!--- this
-    }
-  },
   runtimeConfig: {
     mail: {
       message: {
