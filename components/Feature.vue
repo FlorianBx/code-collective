@@ -32,7 +32,10 @@ const advantages: Advantage[] = [
 <template>
   <section class="bg-punk-gradient text-gray-100 p-4 sm:p-8 my-24">
     <div class="max-w-7xl mx-auto">
-      <h2 class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-center">
+      <h2
+        v-scroll-animation
+        class="text-3xl sm:text-4xl font-bold mb-8 sm:mb-16 text-center"
+      >
         <span class="text-5xl text-grotesk font-bold mb-4 text-center">
           Pourquoi choisir Code Collective ?
         </span>

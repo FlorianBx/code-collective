@@ -85,13 +85,14 @@ const accreditations: Accreditation[] = [
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-center items-center">
         <h2
+					v-scroll-animation
           class="font-bold mb-6 text-center py-1.5 px-4 border-2 border-gray-700 bg-gray-800 rounded"
         >
           Ce que disent nos étudiants
         </h2>
       </div>
       <div class="flex justify-center items-center">
-        <p class="text-5xl text-grotesk font-bold mb-8 sm:mb-16 text-center">
+        <p v-scroll-animation class="text-5xl text-grotesk font-bold mb-8 sm:mb-16 text-center">
           Ce sont eux qui en parlent le mieux.
         </p>
       </div>
