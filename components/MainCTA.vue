@@ -13,7 +13,7 @@
         <div class="flex flex-col sm:flex-row justify-center items-center gap-4">
           <input
             type="email"
-            class="w-full sm:w-96 h-12 sm:h-14 px-4 sm:px-6 py-2 sm:py-3 text-sm text-gray-900 bg-gray-700 rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            class="w-full sm:w-96 h-12 sm:h-14 px-4 sm:px-6 py-2 sm:py-3 text-sm text-gray-900 bg-gray-700 rounded sm:rounded-l focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             placeholder="Votre email"
           />
           <button class="w-full sm:w-auto py-3 sm:py-4 px-6 sm:px-8 bg-blue-600 hover:bg-blue-700 text-white rounded-r transition duration-300 text-base sm:text-lg font-semibold">

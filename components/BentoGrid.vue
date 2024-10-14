@@ -2,22 +2,6 @@
 const mail = useMail();
 const email = ref("");
 
-// const sendEmail = async () => {
-//   if (!email.value) {
-//     console.error('Veuillez entrer une adresse e-mail valide.')
-//     return
-//   }
-//
-//   try {
-//     await sendAdminNotification(email.value)
-//     await sendUserConfirmation(email.value)
-//     console.log('Emails envoyés avec succès')
-//     email.value = ''
-//   } catch (error) {
-//     console.error('Erreur lors de l\'envoi des e-mails:', error)
-//   }
-// }
-
 const sendEmail = async () => {
   if (!email.value) {
     console.error("Veuillez entrer une adresse e-mail valide.");
@@ -79,9 +63,9 @@ const reviewTags = [
               <Stabilo color="blue">
                 <strong>compétences clés</strong>
               </Stabilo>
-              et gagnez en
+							du développement front-end <strong>javascript</strong>, et gagnez en
               <Stabilo color="blue"> <strong>confiance</strong></Stabilo>
-              : 98% de nos participants se démarquent en entretien
+							pour vous aider à trouver le job de vos rêves !
             </p>
           </div>
           <div class="flex flex-col gap-4 mt-4">
@@ -146,7 +130,9 @@ const reviewTags = [
               :key="item"
               class="flex items-center gap-2"
             >
+							<span class="w-6 h-6 flex items-center">
               <LucideCircleCheckBig class="text-blue-400" />
+								</span>
               <span class="text-gray-300">{{ item }}</span>
             </li>
           </ul>

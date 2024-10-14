@@ -12,11 +12,13 @@ const handleShowPromotionBar = () => {
     >
       <LucideConstruction tabindex="-1" class="w-6 h-6 text-gray-200 mr-2" />
       <div class="flex items-center gap-2">
-        <p>Bienvenue ! Notre site évolue, mais vous pouvez déjà réserver vos formations !</p>
+        <p text-sm md:text-md>Bienvenue ! Notre site évolue, mais vous pouvez déjà réserver vos formations !</p>
         <button
           @click="handleShowPromotionBar"
+					aria-label="close promotion button"
+					role="button"
         >
-          <LucideX class="w-6 h-6 text-gray-100 cursor-pointer ml-2 hover:text-blue-400 transition-colors duration-300" />
+          <LucideX class="w-6 h-6 text-gray-100 cursor-pointer mr-4 md:mr-0 ml-2 hover:text-blue-400 transition-colors duration-300" />
         </button>
       </div>
     </div>

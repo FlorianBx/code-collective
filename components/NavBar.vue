@@ -21,22 +21,19 @@
     </div>
     <Teleport to="#teleports">
       <div
-        class="fixed bottom-5 left-10 right-10 flex md:hidden justify-between items-center gap-4 z-50 backdrop-blur bg-white/50 p-2.5 rounded-lg"
+        class="fixed bottom-2 left-3 right-3 flex md:hidden justify-between items-center gap-4 z-50 backdrop-blur bg-white/10 p-6 rounded-lg"
       >
-        <NuxtLink to="/" class="flex flex-col items-center">
+        <NuxtLink to="/" class="flex scale-110 flex-col items-center">
           <LucideHouse />
         </NuxtLink>
-        <NuxtLink to="/formations" class="flex flex-col items-center">
-          <!-- <Icon name="mdi:book-open-variant" size="34" class="text-stone-800" /> -->
-          <div>about</div>
+        <NuxtLink to="/formations" class="flex scale-125 flex-col items-center">
+          <LucideGraduationCap />
         </NuxtLink>
-        <NuxtLink to="/blog" class="flex flex-col items-center">
-          <!-- <Icon name="mdi:file-document-outline" size="34" class="text-stone-800" /> -->
-          <div>fdfs</div>
+        <NuxtLink to="/blog" class="flex scale-105 flex-col items-center">
+          <LucideBook />
         </NuxtLink>
-        <NuxtLink to="/inProgress" class="flex flex-col items-center">
-          <!-- <Icon name="mdi:calendar" size="34" class="text-stone-800" /> -->
-          <div>home</div>
+        <NuxtLink to="/inProgress" class="flex scale-110 flex-col items-center">
+          <LucideCalendar />
         </NuxtLink>
       </div>
     </Teleport>

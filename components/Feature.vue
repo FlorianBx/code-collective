@@ -75,7 +75,7 @@ const advantages: Advantage[] = [
         </div>
       </div>
       <div
-        class="relative group overflow-hidden mt-64 sm:mt-12 bg-punk-surface p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-blue-400"
+        class="relative group overflow-hidden mt-24 sm:mt-12 bg-punk-surface p-6 sm:p-8 rounded-lg shadow-md hover:shadow-xl transition-all duration-300 border-l-4 border-blue-400"
       >
         <h3
           class="text-xl sm:text-2xl font-bold mb-3 sm:mb-4 flex items-center text-gray-100"

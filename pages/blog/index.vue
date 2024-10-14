@@ -25,7 +25,7 @@ import { Calendar, User } from "lucide-vue-next";
           >
             <div class="md:flex h-full">
               <div class="md:flex-shrink-0">
-                <img
+                <nuxt-img
                   :src="articles[0].image"
                   :alt="articles[0].title"
                   class="h-full w-full object-cover md:w-96"
@@ -44,13 +44,13 @@ import { Calendar, User } from "lucide-vue-next";
                   }}
                 </div>
                 <h2
-                  class="block mt-6 text-5xl font-grotesk leading-tight font-bold text-white"
+                  class="block mt-6 text-2xl lg:text-5xl font-grotesk leading-tight font-bold text-white"
                 >
                   {{ articles[0].title }}
                 </h2>
                 <p class="mt-3 text-gray-400">{{ articles[0].description }}</p>
-                <div class="mt-4 absolute bottom-6 right-6 flex items-center">
-                  <img
+                <div class="hidden lg:flex mt-4 absolute bottom-6 right-6 items-center">
+                  <nuxt-img
                     :src="articles[0].authorImage"
                     alt=""
                     class="h-10 w-10 rounded-full mr-2"
@@ -73,7 +73,7 @@ import { Calendar, User } from "lucide-vue-next";
           class="bg-punk-surface rounded-lg overflow-hidden shadow-lg"
         >
           <article>
-            <img
+            <nuxt-img
               :src="article.image"
               :alt="article.title"
               class="w-full h-48 object-cover"
