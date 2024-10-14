@@ -81,7 +81,7 @@ const accreditations: Accreditation[] = [
 </script>
 
 <template>
-  <section class="bg-punk-gradient text-gray-100 p-4 sm:p-8 my-12">
+  <section class="bg-punk-gradient text-gray-100 py-12 mt-24">
     <div class="max-w-7xl mx-auto">
       <div class="flex justify-center items-center">
         <h2

@@ -14,7 +14,7 @@
       <PromotionBar />
       <NavBar />
     </header>
-    <main class="p-4 min-h-screen">
+    <main class="p-6 min-h-screen">
       <slot />
     </main>
   </div>
