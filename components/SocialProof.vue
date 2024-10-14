@@ -145,7 +145,7 @@ const accreditations: Accreditation[] = [
 
       <!-- Statistiques -->
       <div
-        class="bg-punk-surface rounded-lg shadow-md p-6 sm:p-8 mb-8 sm:mb-16"
+        class="bg-punk-surface rounded-lg shadow-md p-6"
       >
         <h3
           class="text-xl sm:text-2xl font-bold mb-6 sm:mb-8 text-center text-gray-100"

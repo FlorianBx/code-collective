@@ -24,8 +24,7 @@
         class="fixed bottom-5 left-10 right-10 flex md:hidden justify-between items-center gap-4 z-50 backdrop-blur bg-white/50 p-2.5 rounded-lg"
       >
         <NuxtLink to="/" class="flex flex-col items-center">
-          <LucideRocket />
-          <div>home</div>
+          <LucideHouse />
         </NuxtLink>
         <NuxtLink to="/formations" class="flex flex-col items-center">
           <!-- <Icon name="mdi:book-open-variant" size="34" class="text-stone-800" /> -->
