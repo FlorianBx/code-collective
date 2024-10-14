@@ -30,7 +30,7 @@ const advantages: Advantage[] = [
 </script>
 
 <template>
-  <section class="bg-punk-gradient text-gray-100 p-4 sm:p-8 my-24">
+  <section class="bg-punk-gradient text-gray-100 py-12 mt-24">
     <div class="max-w-7xl mx-auto">
       <h2
         v-scroll-animation

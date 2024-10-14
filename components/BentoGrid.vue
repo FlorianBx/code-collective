@@ -56,7 +56,7 @@ const reviewTags = [
 </script>
 
 <template>
-  <div class="bg-punk-gradient text-gray-100 p-4 sm:p-8">
+  <div class="bg-punk-gradient text-gray-100">
     <div class="max-w-7xl mx-auto">
       <div
         class="grid grid-cols-1 md:grid-cols-5 grid-rows-[auto,auto,auto,auto] sm:grid-rows-[auto,auto,auto] gap-4 sm:gap-6"
@@ -76,12 +76,12 @@ const reviewTags = [
             </h1>
             <p class="text-punk-primary mb-8 leading-relaxed">
               Maîtrisez les
-              <strong class="border-b-4 border-b-blue-400"
-                >compétences clés</strong
-              >
+              <Stabilo color="blue">
+                <strong>compétences clés</strong>
+              </Stabilo>
               et gagnez en
-              <strong class="border-b-4 border-b-blue-400">confiance</strong> :
-              98% de nos participants se démarquent en entretien
+              <Stabilo color="blue"> <strong>confiance</strong></Stabilo>
+              : 98% de nos participants se démarquent en entretien
             </p>
           </div>
           <div class="flex flex-col gap-4 mt-4">
@@ -110,12 +110,18 @@ const reviewTags = [
           ></div>
         </div>
 
-				<!-- Tags Section -->
+        <!-- Tags Section -->
         <div
           class="bg-punk-surface p-6 rounded-lg order-3 md:order-4 md:col-span-3 row-span-2"
         >
-          <div class="text-4xl md:text-5xl font-bold text-blue-400 font-grotesk">8+ tracks</div>
-          <div class="text-sm mb-4 text-gray-400">Workshops actuellement disponibles</div>
+          <div
+            class="text-4xl md:text-5xl font-bold text-blue-400 font-grotesk"
+          >
+            8+ tracks
+          </div>
+          <div class="text-sm mb-4 text-gray-400">
+            Workshops actuellement disponibles
+          </div>
           <div class="flex flex-wrap gap-2">
             <span
               v-for="tag in reviewTags"
