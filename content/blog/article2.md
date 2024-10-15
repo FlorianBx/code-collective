@@ -1,7 +1,7 @@
 ---
-title: Les femmes dans l'IA ?
+title: test2?
 image: https://images.unsplash.com/photo-1620069105786-c42c8b55b328?q=80&w=2370&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D
-description: Les femmes dans la tech ? Les femmes dans le monde du code ? Les femmes dans le code collective ?
+description: la tech ? le monde du code ? le code collective ?
 author: Florian Beaumont
 authorImage: https://media.licdn.com/dms/image/v2/D4E03AQEWzb2EhoGTyw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1696890004250?e=1734566400&v=beta&t=MuzDE2ChXPA2YS1F8la4kIqmv-grMe8a6Inwd3j2SgA
 date: 2024-04-03
