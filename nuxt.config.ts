@@ -10,7 +10,12 @@ export default defineNuxtConfig({
     "nuxt-lucide-icons",
     // "nuxt-nodemailer"
     "nuxt-mail",
+    "@nuxt/image",
   ],
+	routeRules: {
+	'/': { prerender: true },
+		'/blog': { isr: 3600 },
+},
   runtimeConfig: {
     mail: {
       message: {
@@ -33,3 +38,4 @@ export default defineNuxtConfig({
   //   viewer: true,
   // },
 });
+

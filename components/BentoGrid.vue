@@ -87,6 +87,7 @@ const reviewTags = [
         <!-- Image Section -->
         <div
           class="rounded-lg bg-[url('/image.webp')] flex items-end h-64 md:h-auto overflow-hidden order-2 md:col-span-2 row-span-3"
+					preload="true"
           style="background-size: cover; background-position: center"
         >
           <div
